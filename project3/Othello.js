@@ -362,6 +362,7 @@ class Othello {
         if(this.canMoveTopRight(row,col,this.disc)){
             while(this.board[row-c][col+c] == notDisc){
                 this.board[row-c][col+c] = this.disc;
+                c++;
             }
             c = 1; //reset c
         }
@@ -369,6 +370,7 @@ class Othello {
         if(this.canMoveTopLeft(row,col,this.disc)){
             while(this.board[row-c][col-c] == notDisc){
                 this.board[row-c][col-c] = this.disc;
+                c++;
             }
             c = 1; //reset c
         }
@@ -376,6 +378,7 @@ class Othello {
         if(this.canMoveLeft(row,col,this.disc)){
             while(this.board[row][col-c] == notDisc){
                 this.board[row][col-c] = this.disc;
+                c++;
             }
             c = 1; //reset c
         }
@@ -383,6 +386,7 @@ class Othello {
         if(this.canMoveRight(row,col,this.disc)){
             while(this.board[row][col+c] == notDisc){
                 this.board[row][col+c] = this.disc;
+                c++;
             }
             c = 1; //reset c
         }
@@ -390,6 +394,7 @@ class Othello {
         if(this.canMoveBottomLeft(row,col,this.disc)){
             while(this.board[row+c][col-c] == notDisc){
                 this.board[row+c][col-c] = this.disc;
+                c++;
             }
             c = 1; //reset c
         }
@@ -397,6 +402,7 @@ class Othello {
         if(this.canMoveBottom(row,col,this.disc)){
             while(this.board[row+c][col] == notDisc){
                 this.board[row+c][col] = this.disc;
+                c++;
             }
             c = 1; //reset c
         }
@@ -404,6 +410,7 @@ class Othello {
         if(this.canMoveBottomRight(row,col,this.disc)){
             while(this.board[row+c][col+c] == notDisc){
                 this.board[row+c][col+c] = this.disc;
+                c++;
             }
             c = 1; //reset c
         }
