@@ -111,7 +111,7 @@ class Othello {
         }
 
         if(row-c >= min && this.board[row-c][col] == notDisc){
-            while(row-c >= min){
+            while(row-c >= min && this.board[row-c][col] != "-"){
                 if(this.board[row-c][col] == disc){
                     return true;
                 }
@@ -136,7 +136,7 @@ class Othello {
         }
 
         if(col+c <= max && row-c >= min && this.board[row-c][col+c] == notDisc){
-            while(col+c <= max && row-c >= min){
+            while(col+c <= max && row-c >= min && this.board[row-c][col+c] != "-"){
                 if(this.board[row-c][col+c] == disc){
                     return true;
                 }
@@ -161,7 +161,7 @@ class Othello {
         }
     
         if(col-c >= min && row-c >= min && this.board[row-c][col-c] == notDisc){
-            while(col-c >= min && row-c >= min){
+            while(col-c >= min && row-c >= min && this.board[row-c][col-c] != "-"){
                 if(this.board[row-c][col-c] == disc){
                     return true;
                 }
@@ -186,7 +186,7 @@ class Othello {
         }
     
         if(col-c >= min && this.board[row][col-c] == notDisc){
-            while(col-c >= min){
+            while(col-c >= min && this.board[row][col-c] != "-"){
                 if(this.board[row][col-c] == disc){
                     return true;
                 }
@@ -211,7 +211,7 @@ class Othello {
         }
     
         if(col+c <= max && this.board[row][col+c] == notDisc){
-            while(col+c <= max){
+            while(col+c <= max && this.board[row][col+c] != "-"){
                 if(this.board[row][col+c] == disc){
                     return true;
                 }
@@ -236,7 +236,7 @@ class Othello {
         }
 
         if(row+c <= max && this.board[row+c][col] == notDisc){
-            while(row+c <= max){
+            while(row+c <= max && this.board[row+c][col] != "-"){
                 if(this.board[row+c][col] == disc){
                     return true;
                 }
@@ -261,7 +261,7 @@ class Othello {
         }
 
         if(row+c <= max && col+c <= max && this.board[row+c][col+c] == notDisc){
-            while(row+c <= max && col+c <= max){
+            while(row+c <= max && col+c <= max && this.board[row+c][col+c] != "-"){
                 if(this.board[row+c][col+c] == disc){
                     return true;
                 }
@@ -286,7 +286,7 @@ class Othello {
         }
 
         if(row+c <= max && col-c >= min && this.board[row+c][col-c] == notDisc){
-            while(row+c <= max && col-c >= min){
+            while(row+c <= max && col-c >= min && this.board[row+c][col-c] != "-"){
                 if(this.board[row+c][col-c] == disc){
                     return true;
                 }
