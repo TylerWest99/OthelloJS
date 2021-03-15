@@ -324,7 +324,6 @@ class Othello {
         if(this.canMoveBottomRight(row,col,disc)){
             return true;
         }
-
 		// DO NOT DELETE - if control reaches this statement, then it is not a valid move
 		return false;	// not a valid move
 	}
@@ -446,13 +445,12 @@ class Othello {
 		// Done
         for(var i = 0; i < this.size; i++){
             for(var j = 0; j < this.size; j++){
-                if(this.isValidMoveForDisc(i,j,disc)){
+                if(this.isValidMoveForDisc(i,j,disc) && this.board[i][j] == "-"){
                     return true;
                 }
             }
         }
 
-		
 		// DO NOT DELETE - if control reaches this statement, then a valid move is not available
 		return false;	// not a valid move
 	}
